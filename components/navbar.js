@@ -31,18 +31,12 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Link href="/">
-                    <img
+                    <Image
                       src="/profile.png"
                       alt="Profile"
-                      className="block h-8 w-auto rounded-full lg:hidden cursor-pointer"
-                    />
-                  </Link>
-
-                  <Link href="/">
-                    <img
-                      src="/profile.png"
-                      alt="Profile"
-                      className="hidden h-8 w-auto rounded-full lg:block cursor-pointer"
+                      className="block rounded-full cursor-pointer"
+                      height={32}
+                      width={32}
                     />
                   </Link>
                 </div>
