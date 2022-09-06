@@ -9,9 +9,9 @@ export default function Darkmode() {
   return (
     <button className="block p-1" onClick={handleSetTheme}>
       {theme === "light" ? (
-        <MoonIcon className="w-5 h-5 text-white" />
+        <MoonIcon className="w-5 h-5 text-yellow-300" />
       ) : (
-        <SunIcon className="w-5 h-5 text-white" />
+        <SunIcon className="w-5 h-5 text-yellow-300" />
       )}
     </button>
   );
