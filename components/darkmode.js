@@ -1,4 +1,4 @@
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import { HiSun, HiMoon } from "react-icons/hi";
 import { useTheme } from "next-themes";
 
 export default function Darkmode() {
@@ -9,9 +9,9 @@ export default function Darkmode() {
   return (
     <button className="block p-1" onClick={handleSetTheme}>
       {theme === "light" ? (
-        <MoonIcon className="w-5 h-5 text-yellow-300" />
+        <HiMoon className="w-5 h-5 text-yellow-300" />
       ) : (
-        <SunIcon className="w-5 h-5 text-yellow-300" />
+        <HiSun className="w-5 h-5 text-yellow-300" />
       )}
     </button>
   );
