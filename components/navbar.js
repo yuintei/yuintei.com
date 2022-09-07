@@ -3,23 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Darkmode from "./darkmode";
+import ThemeButton from "./themebutton";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "Home", href: "/", current: "true" },
+  { name: "About", href: "/about", current: "false" },
 ];
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className=" sticky top-0">
+    <Disclosure as="nav" className=" sticky top-0 backdrop-blur-lg">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8 backdrop-blur-lg">
+          <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -45,7 +45,7 @@ export default function Navbar() {
                     {navigation.map((item) => (
                       <Link href={item.href} key={item.name}>
                         <a
-                          className="text-gray-500 dark:text-gray-400 hover:bg-gray-700 hover:text-white
+                          className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
                             px-3 py-2 rounded-md text-sm font-medium"
                           aria-current={item.current ? "page" : undefined}
                         >
@@ -56,7 +56,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <Darkmode></Darkmode>
+              <ThemeButton></ThemeButton>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ export default function Navbar() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className="text-gray-500 dark:text-gray-400 hover:bg-gray-700 hover:text-white
+                  className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
                     block px-3 py-2 rounded-md text-base font-medium"
                   aria-current={item.current ? "page" : undefined}
                 >

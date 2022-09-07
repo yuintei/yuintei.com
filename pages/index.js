@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-6xl font-bold text-slate-800 dark:text-slate-200">
           Welcome to{" "}
           <a className="text-blue-600" href="https://nextjs.org">
             Next.js!
