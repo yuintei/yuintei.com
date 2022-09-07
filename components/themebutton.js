@@ -5,7 +5,7 @@ export default function ThemeButton() {
   const { theme, setTheme } = useTheme();
   return (
     <button
-      className="block p-1 "
+      className="block p-1"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (

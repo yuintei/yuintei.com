@@ -6,8 +6,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeButton from "./themebutton";
 
 const navigation = [
-  { name: "Home", href: "/", current: "true" },
-  { name: "About", href: "/about", current: "false" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -47,7 +47,6 @@ export default function Navbar() {
                         <a
                           className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
                             px-3 py-2 rounded-md text-sm font-medium"
-                          aria-current={item.current ? "page" : undefined}
                         >
                           {item.name}
                         </a>
@@ -56,7 +55,9 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <ThemeButton></ThemeButton>
+              <div>
+                <ThemeButton></ThemeButton>
+              </div>
             </div>
           </div>
 
@@ -69,7 +70,6 @@ export default function Navbar() {
                   href={item.href}
                   className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
                     block px-3 py-2 rounded-md text-base font-medium"
-                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
