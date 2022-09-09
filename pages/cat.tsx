@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { NextPage, GetServerSideProps } from "next";
+import Image from "next/future/image";
 
 interface CatCategory {
   id: number;
@@ -46,8 +47,16 @@ const IndexPage: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
       >
         押してね
       </button>
-      <div className=" mt-8">
-        <img src={catImageUrl} className="rounded-lg" />
+
+      <div className=" mt-8 ">
+        <Image
+          src={catImageUrl}
+          alt="cat"
+          width="0"
+          height="0"
+          sizes="100vw"
+          className="w-full h-auto rounded-lg"
+        />
       </div>
     </div>
   );
