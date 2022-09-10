@@ -9,16 +9,24 @@ import {
   SiTailwindcss,
   SiTwitter,
   SiGithub,
+  SiNodedotjs,
+  SiVercel,
+  SiDocker,
+  SiFigma,
 } from "react-icons/si";
 
 const techstack = [
-  { name: "HTML", logo: <SiHtml5 /> },
-  { name: "CSS", logo: <SiCss3 /> },
   { name: "Javascript", logo: <SiJavascript /> },
   { name: "Typescript", logo: <SiTypescript /> },
+  { name: "Node.js", logo: <SiNodedotjs /> },
   { name: "React", logo: <SiReact /> },
   { name: "Next.js", logo: <SiNextdotjs /> },
+  { name: "Vercel", logo: <SiVercel /> },
+  { name: "Docker", logo: <SiDocker /> },
+  { name: "HTML", logo: <SiHtml5 /> },
+  { name: "CSS", logo: <SiCss3 /> },
   { name: "TailwindCSS", logo: <SiTailwindcss /> },
+  { name: "Figma", logo: <SiFigma /> },
 ];
 
 const social = [
@@ -34,34 +42,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-1 flex-col w-full items-center p-10">
-        <h1 className="p-5 text-center text-4xl font-bold text-slate-800 dark:text-slate-200">
+      <main className="flex flex-col w-full items-center p-3">
+        <h1 className="m-3 p-3 text-center text-4xl font-bold text-slate-800 dark:text-slate-200">
           Yuin Tei
         </h1>
-        <h2 className="p-3 text-center text-xl text-slate-800 dark:text-slate-200">
-          Links
-        </h2>
-        <div className=" justify-center p-5 space-y-1">
+
+        <div className="flex flex-col justify-center m-3 py-3 px-5 w-max rounded-lg  bg-slate-200 dark:bg-slate-800">
           {social.map((item) => (
             <a
               key={item.name}
               href={item.url}
               target="blank"
-              className="flex mx-auto text-sm underline cursor-pointer items-center space-x-2 py-1 px-3 w-max"
+              className="flex text-sm m-1 underline cursor-pointer items-center space-x-2 w-max"
             >
               <div>{item.logo}</div>
               <div>{item.name}</div>
             </a>
           ))}
         </div>
-        <h2 className="p-3 text-center text-xl text-slate-800 dark:text-slate-200">
-          Tech
-        </h2>
-        <div className=" justify-center p-5 space-y-1">
+
+        <div className="flex flex-wrap justify-center m-3 p-3 w-full max-w-md rounded-lg bg-slate-200 dark:bg-slate-800 ">
           {techstack.map((item) => (
             <div
               key={item.name}
-              className="flex mx-auto text-sm items-center space-x-2 rounded-full border py-1 px-3 w-max"
+              className="flex text-xs items-center space-x-2 m-1 py-1 px-3 w-max rounded-full border border-slate-400 dark:border-slate-500"
             >
               <div>{item.logo}</div>
               <div>{item.name}</div>
