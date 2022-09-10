@@ -15,7 +15,7 @@ export default function Header() {
     <Disclosure as="nav" className=" sticky top-0 backdrop-blur-lg">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
                 <div className="px-2 flex flex-shrink-0 items-center">
