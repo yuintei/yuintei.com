@@ -9,9 +9,9 @@ export default function ThemeButton() {
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
-        <HiMoon className="w-5 h-5 text-slate-700" />
+        <HiMoon className="w-6 h-6 text-slate-700" />
       ) : (
-        <HiSun className="w-5 h-5 text-yellow-400" />
+        <HiSun className="w-6 h-6 text-yellow-400" />
       )}
     </button>
   );
