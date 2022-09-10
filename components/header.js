@@ -12,10 +12,10 @@ const navigation = [
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="px-4 sticky top-0 backdrop-blur-lg">
+    <Disclosure as="nav" className="sticky top-0 backdrop-blur-lg">
       {({ open }) => (
         <>
-          <div className="relative flex h-16 items-center justify-between">
+          <div className="relative flex my-3 items-center justify-between">
             <div className="flex items-center">
               <div className="p-2 flex flex-shrink-0 items-center">
                 <Link href="/">

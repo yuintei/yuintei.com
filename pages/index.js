@@ -4,13 +4,13 @@ import { Social } from "../components/social";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="">
       <Head>
         <title>YUIN TEI - Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col w-full items-center p-3">
+      <main className="flex flex-col w-full items-center">
         <h1 className="m-3 p-3 mb-10 text-center text-4xl font-bold text-slate-800 dark:text-slate-200">
           Yuin Tei
         </h1>

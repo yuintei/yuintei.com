@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <Head>
         <title>YUIN TEI - Home</title>
         <link rel="icon" href="/favicon.ico" />
