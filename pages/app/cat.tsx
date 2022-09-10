@@ -37,8 +37,8 @@ const IndexPage: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
   };
 
   return (
-    <div className="flex w-full flex-1 flex-col items-center justify-center px-10 text-center">
-      <h1 className="py-5 text-2xl ">Random Cat Generator</h1>
+    <div className="flex w-full flex-1 flex-col items-center justify-center p-10 text-center">
+      <h1 className="p-10 text-4xl font-bold">Random Cat Generator</h1>
       <button
         onClick={handleClick}
         className=" px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-100"
@@ -46,7 +46,7 @@ const IndexPage: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
         押してね
       </button>
 
-      <div className=" mt-8 ">
+      <div className=" mt-8 w-full max-w-sm">
         <Image
           src={catImageUrl}
           alt="cat"

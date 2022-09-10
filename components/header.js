@@ -12,52 +12,50 @@ const navigation = [
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className=" sticky top-0 backdrop-blur-lg">
+    <Disclosure as="nav" className="px-4 sticky top-0 backdrop-blur-lg">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
-                <div className="px-2 flex flex-shrink-0 items-center">
-                  <Link href="/">
-                    <Image
-                      src="/profile.png"
-                      alt="Profile"
-                      className="block rounded-full cursor-pointer"
-                      height={32}
-                      width={32}
-                    />
-                  </Link>
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <Link href={item.href} key={item.name}>
-                        <a
-                          className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
+          <div className="relative flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <div className="p-2 flex flex-shrink-0 items-center">
+                <Link href="/">
+                  <Image
+                    src="/profile.png"
+                    alt="Profile"
+                    className="block rounded-lg cursor-pointer"
+                    height={32}
+                    width={32}
+                  />
+                </Link>
+              </div>
+              <div className="hidden sm:ml-6 sm:flex">
+                <div className="space-x-4">
+                  {navigation.map((item) => (
+                    <Link href={item.href} key={item.name}>
+                      <a
+                        className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
                             px-3 py-2 rounded-md text-sm font-medium"
-                        >
-                          {item.name}
-                        </a>
-                      </Link>
-                    ))}
-                  </div>
+                      >
+                        {item.name}
+                      </a>
+                    </Link>
+                  ))}
                 </div>
               </div>
-              <div className="flex justify-between">
-                <div className="flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-1 text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
-                <ThemeButton></ThemeButton>
+            </div>
+            <div className="flex items-center">
+              <div className="flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-1 text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
               </div>
+              <ThemeButton></ThemeButton>
             </div>
           </div>
 
