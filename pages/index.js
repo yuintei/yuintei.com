@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { Techstack } from "../components/techstack";
-import { Social } from "../components/social";
+import Skills from "../components/skills";
+import Links from "../components/links";
+import Updates from "../components/updates";
 
 export default function Home() {
   return (
@@ -15,33 +16,11 @@ export default function Home() {
           Yuin Tei
         </h1>
         <h2 className="font-bold">Links</h2>
-        <div className="flex flex-col items-center m-3 mb-10 py-3 px-5 w-max rounded-lg  bg-slate-200 dark:bg-slate-800">
-          {Social.map((item) => (
-            <a
-              key={item.name}
-              href={item.url}
-              target="blank"
-              className="flex text-sm m-1 underline cursor-pointer items-center space-x-2 w-max"
-            >
-              <div>{item.logo}</div>
-              <div>{item.name}</div>
-            </a>
-          ))}
-        </div>
-
+        <Links></Links>
         <h2 className="font-bold">Skills</h2>
-
-        <div className="flex flex-wrap justify-center m-3 mb-10 p-3 w-full max-w-md rounded-lg bg-slate-200 dark:bg-slate-800 ">
-          {Techstack.map((item) => (
-            <div
-              key={item.name}
-              className="flex text-xs items-center space-x-2 m-1 py-1 px-3 w-max rounded-full border border-slate-400 dark:border-slate-500"
-            >
-              <div>{item.logo}</div>
-              <div>{item.name}</div>
-            </div>
-          ))}
-        </div>
+        <Skills></Skills>
+        <h2 className="font-bold">Update History</h2>
+        <Updates></Updates>
       </main>
     </div>
   );
