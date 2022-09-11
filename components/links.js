@@ -7,13 +7,13 @@ export const links = [
 
 export default function Links() {
   return (
-    <div className="flex flex-col items-center m-3 mb-10 py-3 px-5 w-max rounded-lg  bg-slate-200 dark:bg-slate-800">
+    <div className="flex flex-col items-center m-3 px-5 mb-10 w-max rounded-lg  ">
       {links.map((item) => (
         <a
           key={item.name}
           href={item.url}
           target="blank"
-          className="flex text-sm m-1 underline cursor-pointer items-center space-x-2 w-max"
+          className="flex m-1 underline cursor-pointer items-center space-x-2 w-max"
         >
           <div>{item.logo}</div>
           <div>{item.name}</div>

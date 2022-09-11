@@ -12,15 +12,7 @@ export const updates = [
     url: "/",
   },
   {
-    comment: "React Iconsでアイコンを導入しました",
-    url: "/",
-  },
-  {
     comment: "Next.jsのCustom Appを設定しました",
-    url: "/",
-  },
-  {
-    comment: "HeadlessUIでレスポンシブなナビゲーションバーを設置しました",
     url: "/",
   },
   {
@@ -35,16 +27,12 @@ export const updates = [
     comment: "Vercelにデプロイしカスタムドメインを設定しました",
     url: "/",
   },
-  {
-    comment: "create-next-appでウェブサイトを作成しました",
-    url: "/",
-  },
 ];
 
 export default function Updates() {
   return (
-    <div className="m-3 p-5 mb-10 text-xs w-full max-w-md">
-      <ul className="flex flex-col list-disc">
+    <div className="m-3 px-5 mb-10 w-full max-w-md ">
+      <ul className="flex flex-col list-disc space-y-1">
         {updates.map((item) => (
           <li key={item.comment}>
             <div>

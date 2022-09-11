@@ -28,11 +28,11 @@ export const skills = [
 
 export default function Skills() {
   return (
-    <div className="flex flex-wrap justify-center m-3 mb-10 p-3 w-full max-w-md rounded-lg bg-slate-200 dark:bg-slate-800 ">
+    <div className="flex flex-wrap justify-center m-3 px-5 mb-10 w-full max-w-md">
       {skills.map((item) => (
         <div
           key={item.name}
-          className="flex text-xs items-center space-x-2 m-1 py-1 px-3 w-max rounded-full border border-slate-400 dark:border-slate-500"
+          className="flex items-center space-x-2 m-1 py-1 px-3 w-max rounded-full border border-slate-400 dark:border-slate-500"
         >
           <div>{item.logo}</div>
           <div>{item.name}</div>
