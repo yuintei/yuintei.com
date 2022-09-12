@@ -28,7 +28,7 @@ export const skills = [
 
 export default function Skills() {
   return (
-    <div className="flex flex-wrap justify-center m-3 px-5 mb-10 w-full max-w-md">
+    <div className="flex flex-wrap justify-center mt-3 px-5 py-3 mb-5 w-full max-w-md rounded-lg bg-slate-200 dark:bg-slate-800">
       {skills.map((item) => (
         <div
           key={item.name}

@@ -28,7 +28,7 @@ export default function Header() {
               <Link href={item.href} key={item.name}>
                 <a
                   className="text-slate-500 hover:bg-slate-400 hover:text-white dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-white
-                             py-2 px-3 rounded-md text-sm font-bold"
+                             py-2 px-3 rounded-md font-bold"
                 >
                   {item.name}
                 </a>

@@ -31,7 +31,7 @@ export const updates = [
 
 export default function Updates() {
   return (
-    <div className="m-3 px-5 mb-10 w-full max-w-md ">
+    <div className="mt-3 px-5 mb-5 w-full max-w-md ">
       <ul className="flex flex-col list-disc space-y-1">
         {updates.map((item) => (
           <li key={item.comment}>

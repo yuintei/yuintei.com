@@ -7,7 +7,7 @@ export const links = [
 
 export default function Links() {
   return (
-    <div className="flex flex-col items-center m-3 px-5 mb-10 w-max rounded-lg  ">
+    <div className="flex flex-col items-center mt-3 mb-5 px-5 py-3 w-max rounded-lg border border-slate-300 dark:border-slate-700">
       {links.map((item) => (
         <a
           key={item.name}
